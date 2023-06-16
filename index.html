@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork - 1</title>
+</head>
+<body>
+    <script>
+        //Задача 1
+        var num1 = +prompt('Задача 1.\nВведите любое число:');
+        if(num1 <= 10 && num1 >= 1 && num1 % 2 == 0)
+            alert(true);
+        else
+            alert(false);
+
+        //Задача 2
+        var num1=+prompt('Задача 2.\nВведите первое число: ');
+        var num2=+prompt('Введите второе число: ');         
+        var  step=2;       
+        for(var i=num1;i<=num2;i++){
+        for(var j=0;j<20;j++)
+        {       
+           if(i===step**j)     
+            alert(i);                       
+         }
+        }
+        //Задача 3
+        num1 = +prompt('Задача 3.\nВведите число:');
+        var sum = num1;
+        var No = false;
+        do{
+            if(confirm('Хотите ввести ещё число?')){
+                num1 = +prompt('Введите число:');
+                sum += num1;
+            }
+            else
+                No = true;
+        }while(No != true)
+        alert(`Сумма всех введённых чисел - ${sum}`);
+
+        //Задача 4
+        var string1 = prompt('Задача 4\nВведите строку:');
+        var string2 = '';
+        for(var i = 0; i < string1.length; i++){
+            if(string1[i] == ' ' || string1[i] == '1')
+                continue;
+            string2 += string1[i];
+        }
+        alert(`Строка без пробелов и единиц:\n${string2}`);
+
+        //Задача 5
+        var result2 = '';
+        for(var i = 0, j; i < 10;){
+            j = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+            if(j % 3 == 0)
+                continue;
+            result2 += `${j} `
+            i++;
+        }
+        alert(`Задача 5\n${result2}`);
+    </script>
+</body>
+</html>
